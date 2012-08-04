@@ -18,7 +18,7 @@
     <div class="wrapper">
       <header>
         <h1>Bootstrap Select</h1>
-        <p>Javascript dropdown menu using Bootstrap</p>
+        <p>Javascript dropdown menus using Bootstrap</p>
 
         <p class="view"><a href="https://github.com/jimjh/bootstrap-select">View the Project on GitHub <small>jimjh/bootstrap-select</small></a></p>
 
@@ -30,58 +30,108 @@
         </ul>
       </header>
       <section>
-        <h3>Welcome to GitHub Pages.</h3>
+        <h3>Demo</h3>
+        <p>Here is a form that uses <code>bootstrap-select</code>.</p>
+        <form class='form-horizontal' action=''>
+          <fieldset>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+              <!-- PREPEND EXAMPLE -->
+              <div class='control-group'>
+                <label class='control-label'>Prepend</label>
+                <div class='controls'>
+                  <div class='input-prepend dropdown' data-select='true'>
+                    <!-- there must not be a space between the prepend toggle and the input field -->
+                    <a class='add-on dropdown-toggle' data-toggle='dropdown' href='#'>
+                      <!-- span.dropdown-display will be updated with the text from the selected option -->
+                      <span class='dropdown-display'>http://</span>
+                      <i class='caret'></i>
+                    </a><input type='text' placeholder='jh-lim.com' class='span2' />
+                    <!-- this hidden field is used to contain the selected option from the dropdown -->
+                    <input type='hidden' value='http://' class='dropdown-field' />
+                    <!-- unordered list of options -->
+                    <ul class='dropdown-menu'>
+                      <li>
+                        <a href="#" data-value="http://">http://</a>
+                      </li>
+                      <li>
+                        <a href="#" data-value="https://">https://</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /PREPEND EXAMPLE -->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+              <!-- APPEND EXAMPLE -->
+              <div class='control-group'>
+                <label class='control-label'>Append</label>
+                <div class='controls'>
+                  <div class='input-append dropdown' data-select='true'>
+                    <!-- The hidden field can be anywhere within div.dropdown -->
+                    <input type='hidden' value='' class='dropdown-field' />
+                    <!-- Unordered list of options -->
+                    <ul class='dropdown-menu'>
+                      <li>
+                        <a href="http://localhost:3000/" data-value="minutes">minutes</a>
+                      </li>
+                      <li>
+                        <a href="http://localhost:3000/" data-value="hours">hours</a>
+                      </li>
+                      <li>
+                        <a href="http://localhost:3000/" data-value="days">days</a>
+                      </li>
+                    </ul>
+                    <!-- Make sure there isn't a space between the input and the toggle -->
+                    <input type='number' placeholder='5' class='input-mini'/><a
+                      class='add-on dropdown-toggle'
+                      data-toggle='dropdown' href='#'>
+                      <span class='dropdown-display'>minutes</span>
+                      <i class='caret'> </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- /APPEND EXAMPLE -->
+
+          </fieldset>
+        </form>
+
+        <p>Works with <code>.form-inline</code>, <code>.form-horizontal</code>,
+        and <code>.form-vertical</code>. Requires
+        <a href='http://jquery.com' title='jQuery'>jQuery v1.7.2</a> and
+        <a href='http://twitter.github.com/bootstrap/javascript.html#dropdowns' title='Bootstrap'>Bootstrap's</a>
+        Dropdown plugin.</p>
+
+        <h3>Installation</h3>
+        <p>Clone the <a href='https://github.com/jimjh/bootstrap-select'>repo</a> and
+        copy <code>js/bootstrap-select.js</code> and
+        <code>css/bootstrap-select.css</code> into your project.</p>
+        <div class='highlight'>
+<pre>
+<code>$&gt; git clone git@github.com:jimjh/bootstrap-select.git
+$&gt; cp bootstrap-select/js/bootstrap-select.js path/to/your/project/js
+$&gt; cp bootstrap-select/css/bootstrap-select.css path/to/your/project/css
 </code></pre>
+        <p>A minimal <a href='https://github.com/jimjh/bootstrap-select/blob/master/index.html'>example</a>
+        is available in the repo for your reference.</p>
+        </div>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+        <h3>Usage</h3>
+        <p>Using Bootstrap's <code>.prepend</code> as an example, the
+        boilerplate markup is as follows:</p>
 
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-  <div class='input-prepend dropdown' data-select='true'>
-    <!-- there must not be a space between the prepend and the field -->
-    <a class='add-on dropdown-toggle' data-toggle='dropdown' href='#'>
-      <span class='dropdown-display'>http://</span>
-      <i class='caret'></i>
-    </a><input type='text' placeholder='jh-lim.com' class='span2' />
-    <input type='hidden' value='' class='dropdown-field' />
-    <ul class='dropdown-menu'>
-      <li>
-        <a href="/" data-value="http://">http://</a>
-      </li>
-      <li>
-        <a href="/" data-value="https://">https://</a>
-      </li>
-    </ul>
-  </div>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
       </section>
+
       <footer>
         <p>This project is maintained by <a href="https://github.com/jimjh">jimjh</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
+
     </div>
 
     <script src="js/scale.fix.js"></script>
     <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
 
   </body>
