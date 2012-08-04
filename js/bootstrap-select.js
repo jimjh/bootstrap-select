@@ -17,7 +17,7 @@
       // when the hidden field is updated, update dropdown-toggle
       var onFieldChange = function(event) {
         var val = $(this).val();
-        var displayText = options.filter("[data-value='{0}']".f(val)).html();
+        var displayText = options.filter("[data-value='" + val + "']").html();
         display.html(displayText);
       };
 
