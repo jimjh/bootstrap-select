@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Dropdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap Dropdown Demo">
+    <meta name="author" content="Jim Lim">
+    <link href="css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-select.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-select.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    <div class='container'>
+      <section>
+        <div class='row'>
+          <form class='form-inline centered huge' action=''>
+
+            <!-- EXAMPLE 1 -->
+            <div class='input-prepend dropdown' data-select='true'>
+              <!-- there must not be a space between the prepend toggle and the input field -->
+              <a class='add-on dropdown-toggle' data-toggle='dropdown' href='#'>
+                <span class='dropdown-display'>http://</span>
+                <i class='caret'></i>
+              </a><input type='text' placeholder='jh-lim.com' class='span2' />
+              <!-- this hidden field is used to contain the selected option from the dropdown -->
+              <input type='hidden' value='http://' class='dropdown-field' />
+              <!-- unordered list of options -->
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href="#" data-value="http://">http://</a>
+                </li>
+                <li>
+                  <a href="#" data-value="https://">https://</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /EXAMPLE 1 -->
+
+          </form>
+        </div>
+      </section>
+    </div>
+
+  </body>
+</html>
